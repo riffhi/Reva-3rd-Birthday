@@ -610,7 +610,7 @@ body {
     min-height: auto;
   }
 
-  .hero-left { max-width: 100%; align-items: flex-start; }
+  .hero-left { max-width: 100%; align-items: center; text-align: center; }
   .photo-frame { width: 280px; }
   .hero-right { align-self: center; }
 
@@ -623,8 +623,8 @@ body {
 }
 
 @media (max-width: 540px) {
-  .hero-btns { flex-direction: column; }
-  .btn-solid, .btn-outline { text-align: center; }
+  .hero-btns { flex-direction: column; align-items: center; }
+  .btn-solid, .btn-outline { text-align: center; width: 100%; }
   .attend-row { flex-direction: column; gap: 10px; }
   .attend-btn:first-child,
   .attend-btn:last-child  { border-width: 2px; }
