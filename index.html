@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reva Turns 3 – Marvel Birthday Bash!</title>
+  <meta name="description" content="You're invited to Reva's 3rd Marvel-themed birthday bash! Suit up, little heroes. RSVP now." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════
+       SECTION 1 — HERO
+  ══════════════════════════════════ -->
+  <section class="hero" id="hero">
+
+    <!-- Left -->
+    <div class="hero-left">
+      <div class="invited-badge">YOU'RE INVITED!</div>
+
+      <h1 class="hero-title">
+        <span class="t-red">REVA</span>
+        <span class="t-red">TURNS</span>
+        <span class="t-yellow">THREE!</span>
+      </h1>
+
+      <p class="hero-body">
+        Suit up, little hero. We're throwing a
+        <span class="m-tag">MARVEL</span>
+        costume bash. Costumes provided. Snacks. Cake. Chaos.
+      </p>
+
+      <div class="hero-btns">
+        <a href="#rsvp"    class="btn-solid" id="btn-rsvp-hero">RSVP NOW →</a>
+        <a href="#mission" class="btn-outline" id="btn-details-hero">THE DETAILS</a>
+      </div>
+    </div>
+
+    <!-- Right -->
+    <div class="hero-right">
+      <div class="star-burst" aria-label="3 Years">
+        <span class="burst-num">3</span>
+        <span class="burst-lbl">YEARS!</span>
+      </div>
+      <div class="photo-frame">
+        <img src="reva_superhero.png" alt="Reva the Superhero" class="hero-img" id="hero-photo" />
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════
+       SECTION 2 — MISSION BRIEFING
+  ══════════════════════════════════ -->
+  <section class="mission" id="mission">
+
+    <h2 class="mission-title">MISSION BRIEFING</h2>
+
+    <div class="mission-cards">
+
+      <div class="mc mc-red">
+        <div class="mc-label">WHEN</div>
+        <div class="mc-value">Saturday, 28 June 2026</div>
+        <div class="mc-sub">7:00 PM</div>
+      </div>
+
+      <div class="mc mc-blue">
+        <div class="mc-label">WHERE</div>
+        <div class="mc-value">Sri Yantra CHS</div>
+        <div class="mc-sub">Room no 201, Plot no 111, Sector 9, Ulwe</div>
+      </div>
+
+      <div class="mc mc-yellow">
+        <div class="mc-label">DRESS CODE</div>
+        <div class="mc-value">Marvel Superhero</div>
+        <div class="mc-sub">Costumes provided!</div>
+      </div>
+
+    </div>
+
+    <p class="mission-note">
+      Every guest gets a costume on arrival, just tell us your size and which hero you'd like to become.🦸
+    </p>
+
+  </section>
+
+  <!-- ══════════════════════════════════
+       SECTION 3 — SUIT UP (RSVP)
+  ══════════════════════════════════ -->
+  <section class="suitup" id="rsvp">
+
+    <h2 class="suitup-title">SUIT UP</h2>
+    <p class="suitup-sub">Tell us who you are, what size suit you need, and which hero you'll be.</p>
+
+    <div class="form-card" id="rsvp-card">
+
+      <form id="rsvpForm" novalidate>
+
+        <!-- Name -->
+        <div class="fg" id="fg-name">
+          <label class="fl" for="name">Your Name</label>
+          <input type="text" id="name" name="name" class="fi" placeholder="Peter Parker" required />
+          <span class="fe" id="err-name">Please enter your name.</span>
+        </div>
+
+        <!-- Attendance -->
+        <div class="fg" id="fg-attend">
+          <label class="fl">Are you coming?</label>
+          <div class="attend-row">
+            <button type="button" class="attend-btn attend-yes" id="attend-yes" data-val="yes">Heck yes! 🦸</button>
+            <button type="button" class="attend-btn attend-no"  id="attend-no"  data-val="no">Can't make it 😅</button>
+          </div>
+          <input type="hidden" id="attendance" name="attendance" value="" />
+          <span class="fe" id="err-attend">Please select an option.</span>
+        </div>
+
+        <!-- Sizes -->
+        <div class="sizes-row">
+          <div class="fg" id="fg-shirt">
+            <label class="fl" for="shirtSize">Shirt size</label>
+            <input type="text" id="shirtSize" name="shirtSize" class="fi" placeholder="e.g. M, 32, 4T" required />
+            <span class="fe" id="err-shirt">Please enter shirt size.</span>
+          </div>
+          <div class="fg" id="fg-pant">
+            <label class="fl" for="pantSize">Pant size</label>
+            <input type="text" id="pantSize" name="pantSize" class="fi" placeholder="e.g. 30, L, 5" required />
+            <span class="fe" id="err-pant">Please enter pant size.</span>
+          </div>
+        </div>
+
+        <!-- Hero -->
+        <div class="fg" id="fg-hero">
+          <label class="fl" for="superhero">Which superhero will you be?</label>
+          <input type="text" id="superhero" name="superhero" class="fi" placeholder="e.g. Spider-Man, Iron Man, Hulk" required />
+          <span class="fe" id="err-hero">Please enter a superhero.</span>
+        </div>
+
+        <!-- Notes -->
+        <div class="fg" id="fg-notes">
+          <label class="fl" for="notes">Anything else? <span class="opt">(optional)</span></label>
+          <textarea id="notes" name="notes" class="fi fi-ta" placeholder="Allergies, special requests, battle cry…"></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit" id="btn-submit">
+          <span id="btn-text">⚡ SUBMIT RSVP ⚡</span>
+        </button>
+
+      </form>
+
+      <!-- Success -->
+      <div class="success" id="successState" style="display:none">
+        <div class="s-icon">🎉</div>
+        <h3 class="s-title">YOU'RE ASSEMBLED!</h3>
+        <p class="s-msg">Thanks for RSVPing! Your costume is on standby.<br>See you on June 28th, hero!</p>
+        <div class="s-emojis">🦸 ⭐ 🎂 🎊 🦸‍♀️</div>
+        <button class="btn-reset" onclick="resetForm()">Submit Another RSVP</button>
+      </div>
+
+    </div>
+  </section>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
